@@ -1,7 +1,14 @@
+using gitApp.Controllers;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<EmpDbContextcs>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("con"));
+});
 
 var app = builder.Build();
 

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace gitApp.Controllers
 {
-    public class EmpController : Controller
+    public class EmpDbContextcs : Controller
     {
         public IActionResult Index()
         {
